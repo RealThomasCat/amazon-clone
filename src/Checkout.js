@@ -1,14 +1,30 @@
 import React from 'react'
 import './Checkout.css'
+import CheckoutProduct from './CheckoutProduct';
+import { useStateValue } from './StateProvider';
 import Subtotal from './Subtotal'
 
 function Checkout() {
+
+    const [{ basket }, dispatch] = useStateValue();
+
     return (
         <div className='checkout'>
             <div className="checkout__left">
                 <img src="https://www.webfx.com/wp-content/uploads/2021/11/img-types-of-amazon-ads__02.png" alt="" className="checkout__ad" />
                 <div>
                     <h2 className="checkout__title">Shoping Basket</h2>
+
+                    {basket.map(item => (
+                        <CheckoutProduct
+                            id={item.id}
+                            title={item.title}
+                            image={item.image}
+                            price={item.price}
+                            rating={item.rating}
+                        />
+                    ))}
+
                 </div>
             </div>
 

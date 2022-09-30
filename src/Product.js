@@ -9,7 +9,7 @@ function Product({ id, title, image, price, rating }) {
     console.log("this is the basket", basket);
 
     const addToBasket = () => {
-        // dispatch thr item to datalayer
+        // dispatch the item to datalayer
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
@@ -32,7 +32,9 @@ function Product({ id, title, image, price, rating }) {
                 </p>
                 <div className="product__rating">
                     {
-                        Array(rating).fill().map((_, i) => (
+                        Array(rating)
+                        .fill()
+                        .map((_, i) => (
                             <p>&#11088;</p>
                         ))
                     }
