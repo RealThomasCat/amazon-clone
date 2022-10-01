@@ -11,7 +11,7 @@
 .header__logo {
   width: 100px;
   object-fit: contain;
-  margin: 0 20px;
+  margin: 0px 20px;
   margin-top: 18px;
 }
 
@@ -56,12 +56,12 @@
 }
 
 .header__basketCount {
-  margin: 0 10px;
+  margin: 0px 10px;
 }
 
 .header__option {
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  margin: 0px 10px;
   color: white;
 }
