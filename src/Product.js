@@ -6,8 +6,6 @@ function Product({ id, title, image, price, rating }) {
 
     const [{ basket }, dispatch] = useStateValue();
 
-    console.log("this is the basket", basket);
-
     const addToBasket = () => {
         // dispatch the item to datalayer
         dispatch({
@@ -33,10 +31,10 @@ function Product({ id, title, image, price, rating }) {
                 <div className="product__rating">
                     {
                         Array(rating)
-                        .fill()
-                        .map((_, i) => (
-                            <p>&#11088;</p>
-                        ))
+                            .fill()
+                            .map((_, i) => (
+                                <p>&#11088;</p>
+                            ))
                     }
 
                 </div>

@@ -6,14 +6,16 @@ import Subtotal from './Subtotal'
 
 function Checkout() {
 
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     return (
         <div className='checkout'>
             <div className="checkout__left">
-                <img src="https://www.webfx.com/wp-content/uploads/2021/11/img-types-of-amazon-ads__02.png" alt="" className="checkout__ad" />
+                <img src="https://m.media-amazon.com/images/G/01/AdProductsWebsite/images/AUX/ILB_BrightColors_Approved._TTW_.jpg" alt="" className="checkout__ad" />
+
                 <div>
-                    <h2 className="checkout__title">Shoping Basket</h2>
+                    <h3 className="checkout__userName">{user?.email}</h3>
+                    <h2 className="checkout__title">Your Shoping Basket</h2>
 
                     {basket.map(item => (
                         <CheckoutProduct

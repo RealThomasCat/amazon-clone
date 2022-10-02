@@ -1,6 +1,11 @@
 .checkoutProduct {
   display: flex;
+  padding: 20px 0px;
   margin: 20px 0px;
+}
+
+.checkoutProduct:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 6px -1px;
 }
 
 .checkoutProduct__image {
