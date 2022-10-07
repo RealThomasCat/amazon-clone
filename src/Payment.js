@@ -29,12 +29,14 @@ function Payment() {
                 method: 'post',
                 //stripe expects the total in a currencies subunits 
                 url: `/payments/create?total=${getBasketTotal(basket) * 100}`
-            })
+            });
             setClientSecret(response.data.clientSecret)
         }
         //update clientSecret
         getClientSecret();
     }, [basket])
+
+    console.log('Secret:', clientSecret)
 
     const handleSubmit = async (event) => {
         event.preventDefault();
